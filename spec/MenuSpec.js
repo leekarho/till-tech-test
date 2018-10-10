@@ -9,7 +9,7 @@ describe('menu', function(){
   });
 
   it('customer can make an order', function(){
-    menu.cust_order("Cafe Latte", 3)
+    menu.custOrder("Cafe Latte", 3)
     expect(menu.order).toEqual({ "Cafe Latte":3 });
   });
 
