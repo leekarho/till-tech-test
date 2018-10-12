@@ -8,12 +8,8 @@
   Receipt.prototype.hipsterCoffee = function(api = 'https://raw.githubusercontent.com/makersacademy/course/master/individual_challenges/hipstercoffee.json?token=AmYty96_i7g_mFyG5GtRoBom4yffkCejks5bxzgBwA%3D%3D'){
     var self = this
     fetch(api)
-      .then(function(response) {
-        return response.json()
-      })
-      .then(function(data) {
-        self.list = data[0].prices
-      })
+      .then(response => response.json())
+      .then(data => self.list = data[0].prices)
   }
 
   Receipt.prototype.bill = function(custOrder) {

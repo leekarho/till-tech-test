@@ -9,10 +9,10 @@ describe('receipt', function(){
   });
 
   it('calculates the total bill', function(){
-    var custOrder = [{ "Cafe Latte": 3, "Cortado": 2 }]
-    receipt.hipsterCoffee()
+    var custOrder = { "Cafe Latte": 3, "Cortado": 2 }
+    receipt.list = [{ "Cafe Latte": 4.75, "Cortado": 4.55 }]
     receipt.bill(custOrder)
-    expect(receipt.list).toEqual(23.35);
+    expect(receipt.totalBill).toEqual(23.35);
   });
 
 });
