@@ -1,6 +1,7 @@
 (function(exports){
-  function Menu(){
+  function Menu(name){
     this.order = {};
+    this.name = name
   }
 
   Menu.prototype.custOrder = function(food, quantity){

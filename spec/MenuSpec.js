@@ -5,7 +5,11 @@ describe('menu', function(){
   var menu
 
   beforeEach(function(){
-    menu = new Menu();
+    menu = new Menu('Pete');
+  });
+
+  it('instantiates with a name', function(){
+    expect(menu.name).toEqual('Pete')
   });
 
   it('customer can make an order', function(){
